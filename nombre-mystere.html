@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre mystère</title>
+</head>
+<body>
+    <script>
+        const nombreMystere = 67
+        let nbr = Number(prompt("choisissez un nombre"  ));
+
+        while (nbr != nombreMystere){
+            
+
+             if (nbr<67){
+                
+                nbr = Number(prompt('le nombre est plus petit que le nombre mystère, réessayer ' ));
+             }
+        
+        
+            if (nbr>67){
+                
+                nbr = Number(prompt('le nombre est plus grand que le nombre mystère, réessayer ' ));
+            }
+        }
+        
+    
+            document.write('Gagné !!!, le nombre mystère était bien ', + nombreMystere);
+        
+
+        
+
+    </script>
+</body>
+</html>
