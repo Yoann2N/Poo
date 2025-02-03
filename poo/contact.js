@@ -15,11 +15,11 @@ class Contact {
         console.log(this.Nom, this.Prenom, this.Date_de_naissance, this.Adresse, this.Code_postal, this.Ville, this.Email, this.Telephone);
     }
 
-    mail() {
-        return this.Email;
+    mail(email) {
+        console.log("Le mail à été envoyé à l'adresse suivante : ", this.email);
     }
     
-}
+};
 
 let contact1 = new Contact("Bouvet", "Yoann", "1993-06-01", "rue de la paix", 75000, "Paris", "bouvet.yoann@gmail.com", "0606060606");
 let contact2 = new Contact("Dupont", "Jean", "1990-06-01", "rue de la paix", 75000, "Paris", "dupont.jean@gmail.com", "0606060607");
@@ -37,5 +37,5 @@ const Liste_contact = [contact1, contact2, contact3, contact4, contact5, contact
 //for (let i = 0; i < Liste_contact.length; i++) {
    // Liste_contact[i].afficher();
 //}
-Liste_contact.forEach(function(Contact) => Contact.afficher());
-Liste_contact.foreach(Contact => Contact.afficher());
+Liste_contact.forEach(function(Liste_contact) {Contact.afficher()});
+Liste_contact.forEach(Liste_contact => Liste_contact.afficher());
