@@ -34,6 +34,8 @@ let contact10 = new Contact("Roux", "Louis", "1999-06-01", "rue de la paix", 750
 
 const Liste_contact = [contact1, contact2, contact3, contact4, contact5, contact6, contact7, contact8, contact9, contact10];
 
-for (let i = 0; i < Liste_contact.length; i++) {
-    Liste_contact[i].afficher();
-}
+//for (let i = 0; i < Liste_contact.length; i++) {
+   // Liste_contact[i].afficher();
+//}
+Liste_contact.forEach(function(Contact) => Contact.afficher());
+Liste_contact.foreach(Contact => Contact.afficher());
