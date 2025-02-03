@@ -10,11 +10,16 @@ afficher = function () {
     console.log(this.client, this.Numero, this.solde);
 };
 
-crediter = function (argent) {
+crediter = function (montant) {
     this.solde += argent; 
+    console.log(this.solde);
 }
 
-debiter = function (argent) {
+debiter = function (montant) {
     this.solde -= argent;
+    console.log(this.solde);
 }
 
+compte.afficher();
+compte.crediter(500);
+compte.debiter(200);
