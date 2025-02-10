@@ -28,7 +28,7 @@ class employe extends contact {
         else {
                 this.salaire = this.salaire + (this.salaire * 0.05);
             }
-            console.log(this.salaire + "€" + " " + this.anciennete + " " + "ans d'ancienneté");
+            console.log(this.salaire + "€" + " " + this.anciennete+ "ans d'ancienneté");
         
     
     }
