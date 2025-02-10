@@ -17,7 +17,7 @@ class employe extends contact {
         this.anciennete = anciennete;
     }
 
-    afficher() {
+    afficheSalaire() {
         console.log(this.salaire + "€", this.anciennete + "ans d'anciennté");
     }
 
@@ -36,4 +36,5 @@ class employe extends contact {
 
 let employe1 = new employe("Pichars", "Roger", "1993-06-01", 2000, 8);
 console.log(employe1.afficher());
+console.log(employe1.afficheSalaire());
 console.log(employe1.augmentersalaire());
