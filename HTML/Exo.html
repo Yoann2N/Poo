@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        
+        
+        
+        .entete {
+            background-color: #f8f6f6;
+            color: rgb(6, 6, 6);
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .entete button:hover {
+            background-color: #555;
+        }
+
+        .EcranAcceuil {
+            padding: 20px;
+            height: calc(100% - 50px);
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="entête">
+        <button onclick="showContent('acceuil')">Acceuil</button>
+        <button onclick="showContent('produit')">Produit</button>
+        <button onclick="showContent('contact')">Contact</button>
+    </div>
+
+    <div class="Ecran d'acceuil" id="Ecran d'acceuil">
+        <h1>Acceuil</h1>
+        <p>page d'acceuil.</p>
+    </div>
+
+    <script>
+        function showContent(page) {
+            const contentDiv = document.getElementById("Ecran d'acceuil");
+            let entete = '';
+
+            switch(page) {
+                case 'acceuil':
+                    entete = `
+                        <h1>Acceuil</h1>
+                        <p>Page d'acceuil.</p>
+                    `;
+                    break;
+                case 'produit':
+                    entete = `
+                        <h1>Produits</h1>
+                        <p>Page produit.</p>
+                    `;
+                    break;
+                case 'contact':
+                    entete = `
+                        <h1>Contact</h1>
+                        <p>Page contact.</p>
+                    `;
+                    break;
+            }
+
+            contentDiv.innerHTML = entete;
+        }
+    </script>
+</body>
+</html>
