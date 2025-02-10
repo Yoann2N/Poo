@@ -5,7 +5,7 @@ const Connexion = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',  
-    database: 'testdb'
+    database: 'dbtest'
 });
 
 Connexion.connect((err) => {
@@ -14,3 +14,13 @@ Connexion.connect((err) => {
 });
 
 // A partir d'ici on est connecté à la base de données MySQL
+
+Connexion.query('SELECT * FROM user',
+    function(err, rows) {
+    if (err, rows) 
+        if (err) throw err;
+        console.log('Data reçu depuis dbtest:');
+        console.log(rows);
+    }
+
+);
