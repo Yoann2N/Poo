@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Javascript</title>
+    <style>
+        .btn {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        #Text {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1c40f;
+            color: white;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Méthode 1 : attribut onclick pour associer le JS à l'évènement sur l'élément -->
+    <button id="btn1" class="btn" onclick="clic()">Cliquez ici</button>
+    <button id="btn2" class="btn">Cliquez ici</button>
+    <div id="Text"></div>
+
+    <script> 
+    // Méthode 2 : sélectionner l'élément et ajouter un écouteur d'évènement
+        let element = document.querySelector('.btn');
+        // let element = document.querySelector('#btn1'); uniquement le bouton 1 
+        element.addEventListener('click', function() {
+            alert('Click sur le bouton');
+        });
+        //function clic() {
+        //    alert('Click sur le bouton' + t);
+        //}
+    </script>
+        
+
+</body>
+</html>
