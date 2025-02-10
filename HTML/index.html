@@ -39,14 +39,17 @@
 
     <script> 
     // Méthode 2 : sélectionner l'élément et ajouter un écouteur d'évènement
-        let element = document.querySelector('.btn');
+        let element = document.querySelector('#btn1');
         // let element = document.querySelector('#btn1'); uniquement le bouton 1 
-        element.addEventListener('click', function() {
+        element.addEventListener('click', () => clic()); 
+           
+       /* document.querySelector('#btn1').addEventListener('click', () => clic());
+        function clic() {
             alert('Click sur le bouton');
-        });
-        //function clic() {
-        //    alert('Click sur le bouton' + t);
-        //}
+        } */
+       
+
+
     </script>
         
 
