@@ -18,19 +18,22 @@ class employe extends contact {
     }
 
     afficher() {
-        super.afficher();
-        console.log(this.salaire, this.anciennete);
+        console.log(this.salaire + "€", this.anciennete + "ans d'anciennté");
     }
 
     augmentersalaire(){
         if (this.anciennete > 10) {
             this.salaire = this.salaire + (this.salaire * 0.10);
+        }
         else {
                 this.salaire = this.salaire + (this.salaire * 0.05);
             }
-            console.log(this.salaire + " " + this.anciennete);
-        }
+            console.log(this.salaire + "€" + " " + this.anciennete + " " + "ans d'ancienneté");
+        
     
     }
 }
 
+let employe1 = new employe("Pichars", "Roger", "1993-06-01", 2000, 8);
+console.log(employe1.afficher());
+console.log(employe1.augmentersalaire());
