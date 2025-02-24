@@ -12,14 +12,18 @@
         <p id="contenu"></p>
     </div>
     <Script>
-        fetch('lecture.txt')
-      .then(response => {
-        return response.text();
-      })
-      .then(text => {
-        
-        document.getElementById('contenu').textContent = text;
-      })
+        function chargerFichier() {
+            fetch('lecture.txt')
+            .then(response => {
+          if (!response.ok) {
+          }
+          return response.text();
+        })
+        .then(text => {
+          document.getElementById('contenu').textContent = text;
+        })
+    }
+    document.getElementById('loadButton').addEventListener('click', chargerFichier);
       
     </Script>
 </body>
