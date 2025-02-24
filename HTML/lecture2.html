@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture d'un fichier texte</title>
+</head>
+<body>
+    <div>
+        <h1>Contenu du fichier texte</h1>
+        <p id="contenu"></p>
+    </div>
+    <Script>
+        fetch('lecture.txt')
+      .then(response => {
+        return response.text();
+      })
+      .then(text => {
+        
+        document.getElementById('contenu').textContent = text;
+      })
+      
+    </Script>
+</body>
+</html>
